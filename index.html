@@ -1,0 +1,3075 @@
+<!DOCTYPE html>
+<html lang="om">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tullu Rajota Ethiopian Orthodox Church</title>
+
+    <meta
+            name="description"
+            content="Tullu Rajota Ethiopian Orthodox Tewahedo Church - Afaan Oromo and English Service."
+    >
+
+    <style>
+
+        :root {
+            --blue: #176b45;
+            --dark-blue: #073b28;
+            --deep-blue: #04291d;
+            --gold: #d5a337;
+            --light-gold: #f4d98b;
+            --red: #a52a2a;
+            --cream: #fff9e9;
+            --white: #ffffff;
+            --dark: #17231d;
+            --gray: #66736c;
+            --light: #f4f7f4;
+            --border: #e4e0d2;
+            --shadow: 0 12px 35px rgba(13, 63, 43, 0.12);
+            --radius: 18px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        html {
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            color: var(--dark);
+            background: var(--white);
+            line-height: 1.7;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button,
+        input,
+        textarea,
+        select {
+            font: inherit;
+        }
+
+        .container {
+            width: min(1150px, 92%);
+            margin: auto;
+        }
+
+        /* ==========================================
+           ETHIOPIAN PATTERN
+        ========================================== */
+
+        .ethiopian-pattern {
+            height: 12px;
+            background:
+                    linear-gradient(
+                            135deg,
+                            var(--green) 25%,
+                            var(--gold) 25%,
+                            var(--gold) 50%,
+                            var(--red) 50%,
+                            var(--red) 75%,
+                            var(--green) 75%
+                    );
+            background-size: 34px 34px;
+        }
+
+        /* ==========================================
+           TOP BAR
+        ========================================== */
+
+        .topbar {
+            background: var(--deep-green);
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+        }
+
+        .topbar-inner {
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* ==========================================
+           NAVBAR
+        ========================================== */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,.97);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .navbar {
+            min-height: 84px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .cross-logo {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: var(--green);
+            color: var(--gold);
+            border: 3px solid var(--gold);
+            display: grid;
+            place-items: center;
+            font-size: 28px;
+        }
+
+        .brand-text strong {
+            display: block;
+            color: var(--dark-green);
+            font-size: 20px;
+            line-height: 1.2;
+        }
+
+        .brand-text small {
+            display: block;
+            color: var(--gray);
+            font-family: Arial, sans-serif;
+            font-size: 9px;
+            letter-spacing: .3px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            list-style: none;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            transition: .25s;
+        }
+
+        .nav-links a:hover {
+            color: var(--green);
+        }
+
+        .nav-give {
+            color: white !important;
+            background: var(--green);
+            padding: 10px 17px;
+            border-radius: 30px;
+        }
+
+        /* LANGUAGE BUTTON */
+
+        .language-switcher {
+            display: flex;
+            gap: 3px;
+            padding: 3px;
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            background: #fff;
+        }
+
+        .language-switcher button {
+            border: 0;
+            background: transparent;
+            padding: 7px 11px;
+            border-radius: 20px;
+            cursor: pointer;
+            color: var(--gray);
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .language-switcher button.active {
+            background: var(--green);
+            color: white;
+        }
+
+        .menu-btn {
+            display: none;
+            border: 0;
+            background: transparent;
+            color: var(--dark-green);
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* ==========================================
+           HERO
+        ========================================== */
+
+        .hero {
+            min-height: 700px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            color: white;
+
+            background:
+                    linear-gradient(
+                            90deg,
+                            rgba(4,41,29,.97),
+                            rgba(4,41,29,.78),
+                            rgba(4,41,29,.35)
+                    ),
+                    url("images/hero-ethiopian-church.jpg")
+                    center/cover;
+        }
+
+        .hero-content {
+            max-width: 760px;
+            padding: 100px 0;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            margin-bottom: 14px;
+            color: var(--green);
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .hero .eyebrow {
+            color: var(--light-gold);
+        }
+
+        .hero h1 {
+            font-size: clamp(46px, 7vw, 82px);
+            line-height: 1.02;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: var(--light-gold);
+        }
+
+        .hero p {
+            max-width: 680px;
+            color: #f2f5f3;
+            font-size: 19px;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 23px;
+            border-radius: 30px;
+            border: 2px solid transparent;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: .25s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: #1b241e;
+        }
+
+        .btn-outline {
+            color: white;
+            border-color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--dark-green);
+        }
+
+        /* ==========================================
+           QUICK INFO
+        ========================================== */
+
+        .quick-info {
+            position: relative;
+            margin-top: -55px;
+            z-index: 10;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            overflow: hidden;
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .info-card {
+            display: flex;
+            gap: 15px;
+            padding: 29px;
+            border-right: 1px solid var(--border);
+        }
+
+        .info-card:last-child {
+            border-right: 0;
+        }
+
+        .info-icon {
+            font-size: 30px;
+        }
+
+        .info-card h3 {
+            color: var(--dark-green);
+            font-size: 18px;
+        }
+
+        .info-card p {
+            color: var(--gray);
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+        }
+
+        /* ==========================================
+           SECTIONS
+        ========================================== */
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            max-width: 720px;
+            text-align: center;
+            margin: 0 auto 50px;
+        }
+
+        .section-header h2 {
+            color: var(--dark-green);
+            font-size: clamp(34px,5vw,50px);
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: var(--gray);
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+        }
+
+        /* ==========================================
+           ABOUT
+        ========================================== */
+
+        .about {
+            background: linear-gradient(180deg,var(--cream),#fffdf8);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            height: 530px;
+            object-fit: cover;
+            border-radius: var(--radius);
+            border: 7px solid white;
+            box-shadow: var(--shadow);
+        }
+
+        .image-badge {
+            position: absolute;
+            right: -20px;
+            bottom: 30px;
+            padding: 18px 22px;
+            background: var(--green);
+            color: white;
+            border-radius: 14px;
+            box-shadow: var(--shadow);
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+        }
+
+        .image-badge strong {
+            display: block;
+            color: var(--light-gold);
+            font-size: 30px;
+            line-height: 1;
+        }
+
+        .about-text h2 {
+            color: var(--dark-green);
+            font-size: clamp(35px,5vw,52px);
+            line-height: 1.08;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: var(--gray);
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+            margin-bottom: 18px;
+        }
+
+        .check-list {
+            list-style: none;
+            margin: 25px 0;
+        }
+
+        .check-list li {
+            margin: 10px 0;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        .check-list li::before {
+            content: "✓";
+            color: var(--green);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* ==========================================
+           CARDS
+        ========================================== */
+
+        .fathers {
+            background: linear-gradient(180deg,#fffaf0,#f8f1df);
+        }
+
+        .father-grid,
+        .service-grid,
+        .events-grid,
+        .sermon-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 24px;
+        }
+
+        .father-card,
+        .service-card,
+        .event-card {
+            overflow: hidden;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            transition: .3s;
+        }
+
+        .father-card:hover,
+        .service-card:hover,
+        .event-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow);
+        }
+
+        .father-image {
+            height: 360px;
+            overflow: hidden;
+            background: #d6bd79;
+        }
+
+        .father-image img {
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .father-content,
+        .event-content {
+            padding: 26px;
+        }
+
+        .father-content span,
+        .date {
+            color: #a8791d;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .father-content h3,
+        .event-content h3,
+        .service-card h3 {
+            color: var(--dark-green);
+            font-size: 22px;
+            margin: 7px 0 10px;
+        }
+
+        .father-content p,
+        .event-content p,
+        .service-card p {
+            color: var(--gray);
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        /* ==========================================
+           SERVICES
+        ========================================== */
+
+        .services {
+            background: white;
+        }
+
+        .service-card {
+            padding: 30px 26px;
+        }
+
+        .service-icon {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        /* ==========================================
+           SCHEDULE
+        ========================================== */
+
+        .schedule {
+            background: var(--light);
+        }
+
+        .schedule-table {
+            max-width: 880px;
+            margin: auto;
+            overflow: hidden;
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .schedule-row {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr 1fr;
+            padding: 21px 28px;
+            border-bottom: 1px solid var(--border);
+            font-family: Arial, sans-serif;
+        }
+
+        .schedule-header {
+            color: white;
+            background: var(--green);
+            font-weight: bold;
+        }
+
+        .day {
+            color: var(--dark-green);
+            font-weight: bold;
+        }
+
+        .schedule-header .day {
+            color: white;
+        }
+
+        .time {
+            color: var(--green);
+            font-weight: bold;
+        }
+
+        /* ==========================================
+           EVENTS
+        ========================================== */
+
+        .event-image {
+            height: 220px;
+            object-fit: cover;
+        }
+
+        /* ==========================================
+           MINISTRIES
+        ========================================== */
+
+        .ministries {
+            background: var(--cream);
+        }
+
+        .ministry-grid {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+        }
+
+        .ministry {
+            padding: 30px 20px;
+            text-align: center;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+        }
+
+        .ministry-icon {
+            font-size: 38px;
+        }
+
+        .ministry h3 {
+            color: var(--dark-green);
+            margin: 8px 0;
+        }
+
+        .ministry p {
+            color: var(--gray);
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+        }
+
+        /* ==========================================
+           SERMONS
+        ========================================== */
+
+        .sermons {
+            background: linear-gradient(135deg,var(--deep-green),var(--dark-green));
+            color: white;
+        }
+
+        .sermons .section-header h2 {
+            color: white;
+        }
+
+        .sermons .section-header p {
+            color: #cbd8d0;
+        }
+
+        .sermon-card {
+            padding: 30px;
+            background: rgba(255,255,255,.07);
+            border: 1px solid rgba(255,255,255,.13);
+            border-radius: var(--radius);
+        }
+
+        .play {
+            width: 57px;
+            height: 57px;
+            display: grid;
+            place-items: center;
+            margin-bottom: 20px;
+            border-radius: 50%;
+            background: var(--gold);
+            color: var(--dark);
+        }
+
+        .sermon-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .sermon-card p {
+            color: #cbd8d0;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        /* ==========================================
+           GALLERY
+        ========================================== */
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-auto-rows: 240px;
+            gap: 14px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 14px;
+            background: var(--dark-green);
+        }
+
+        .gallery-item.large {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-label {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 35px 18px 17px;
+            color: white;
+            background: linear-gradient(transparent,rgba(0,0,0,.85));
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* ==========================================
+           GIVING
+        ========================================== */
+
+        .giving {
+            color: white;
+            text-align: center;
+            background:
+                    linear-gradient(
+                            135deg,
+                            rgba(23,107,69,.96),
+                            rgba(4,41,29,.96)
+                    ),
+                    center/cover;
+        }
+
+        .giving-content {
+            max-width: 780px;
+            margin: auto;
+        }
+
+        .giving .eyebrow {
+            color: var(--light-gold);
+        }
+
+        .giving h2 {
+            font-size: clamp(37px,5vw,57px);
+            line-height: 1.1;
+            margin-bottom: 18px;
+        }
+
+        .giving p {
+            color: #e5eee9;
+            font-family: Arial, sans-serif;
+            margin-bottom: 30px;
+        }
+
+        .center-buttons {
+            justify-content: center;
+        }
+
+        /* ==========================================
+           CONTACT
+        ========================================== */
+
+        .contact {
+            background: var(--light);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: .9fr 1.1fr;
+            gap: 55px;
+        }
+
+        .contact-info h2 {
+            color: darkolivegreen;
+            font-size: 46px;
+            line-height: 1.1;
+            margin-bottom: 18px;
+        }
+
+        .contact-info > p {
+            color: var(--gray);
+            font-family: Arial, sans-serif;
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
+        .contact-item-icon {
+            font-size: 23px;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: #073b28;
+        }
+
+        .contact-item span {
+            color: var(--gray);
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        .contact-form {
+            padding: 35px;
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 7px;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 14px;
+            outline: none;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            background: white;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        textarea {
+            min-height: 145px;
+            resize: vertical;
+        }
+
+        /* ==========================================
+           FOOTER
+        ========================================== */
+
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 65px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        footer h3 {
+            color: var(--light-gold);
+            margin-bottom: 14px;
+        }
+
+        footer p,
+        footer li {
+            color: #bdccc4;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin: 8px 0;
+        }
+
+        .footer-brand {
+            font-size: 26px;
+            margin-bottom: 12px;
+        }
+
+        .socials {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .social {
+            width: 39px;
+            height: 39px;
+            display: grid;
+            place-items: center;
+            border: 1px solid rgba(255,255,255,.2);
+            border-radius: 50%;
+        }
+
+        .copyright {
+            padding-top: 22px;
+            border-top: 1px solid rgba(255,255,255,.1);
+            color: #91a79b;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+        }
+
+        /* ==========================================
+           MOBILE
+        ========================================== */
+
+        @media (max-width: 950px) {
+
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 84px;
+                left: 0;
+                right: 0;
+
+                display: none;
+
+                flex-direction: column;
+                align-items: stretch;
+
+                padding: 25px;
+
+                background: white;
+                box-shadow: var(--shadow);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .info-grid,
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .info-card {
+                border-right: 0;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .father-grid,
+            .service-grid,
+            .events-grid,
+            .sermon-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .ministry-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            section {
+                padding: 70px 0;
+            }
+
+            .hero {
+                min-height: 650px;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .about-image img {
+                height: 380px;
+            }
+
+            .father-grid,
+            .service-grid,
+            .events-grid,
+            .sermon-grid,
+            .ministry-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+                grid-auto-rows: 190px;
+            }
+
+            .gallery-item.large {
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+
+            .schedule-row {
+                grid-template-columns: 1fr;
+                gap: 5px;
+            }
+
+            .schedule-header {
+                display: none;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+<!-- ==========================================
+     TOP BAR
+========================================== -->
+
+<div class="topbar">
+
+    <div class="container topbar-inner">
+
+      <span data-om="✝ Tullu Rajota  Church"
+            data-en="✝ Tullu Rajota  Church">
+        ✝ Tullu Rajota Ethiopian Orthodox Tewahedo Church
+      </span>
+
+    </div>
+
+</div>
+
+
+<!-- ==========================================
+     NAVIGATION
+========================================== -->
+
+<header>
+
+    <div class="container navbar">
+
+        <a href="#home" class="brand">
+
+            <div class="cross-logo">
+                ✝
+            </div>
+
+            <div class="brand-text">
+
+                <strong>
+                    Tullu Rajota
+                </strong>
+
+                <small>
+                    TULLU RAJOTA CHURCH
+                </small>
+
+            </div>
+
+        </a>
+
+
+        <button
+                class="menu-btn"
+                onclick="toggleMenu()"
+        >
+            ☰
+        </button>
+
+
+        <ul class="nav-links" id="navLinks">
+
+            <li>
+                <a href="#home"
+                   data-om="Mana"
+                   data-en="Home">
+                    Mana
+                </a>
+            </li>
+
+            <li>
+                <a href="#about"
+                   data-om="Waa'ee Keenya"
+                   data-en="About Us">
+                    Waa'ee Keenya
+                </a>
+            </li>
+
+            <li>
+                <a href="#fathers"
+                   data-om="Abbootii"
+                   data-en="Church Fathers">
+                    Abbootii
+                </a>
+            </li>
+
+            <li>
+                <a href="#services"
+                   data-om="Waaqeffannaa"
+                   data-en="Worship">
+                    Waaqeffannaa
+                </a>
+            </li>
+
+            <li>
+                <a href="#events"
+                   data-om="Sagantaa"
+                   data-en="Events">
+                    Sagantaa
+                </a>
+            </li>
+
+            <li>
+                <a href="#gallery"
+                   data-om="Aadaa"
+                   data-en="Culture">
+                    Aadaa
+                </a>
+            </li>
+
+            <li>
+                <a href="#contact"
+                   data-om="Qunnamtii"
+                   data-en="Contact">
+                    Qunnamtii
+                </a>
+            </li>
+
+            <li>
+                <a href="#giving"
+                   class="nav-give"
+                   data-om="Kennaa"
+                   data-en="Give">
+                    Kennaa
+                </a>
+            </li>
+
+            <!-- LANGUAGE SWITCH -->
+
+            <li>
+
+                <div class="language-switcher">
+
+                    <button
+                            id="omBtn"
+                            class="active"
+                            onclick="changeLanguage('om')"
+                    >
+                        Afaan Oromo
+                    </button>
+
+                    <button
+                            id="enBtn"
+                            onclick="changeLanguage('en')"
+                    >
+                        English
+                    </button>
+
+                </div>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+</header>
+
+
+<!-- ==========================================
+     HERO
+========================================== -->
+
+<main>
+
+    <section class="hero" id="home">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+          <span class="eyebrow"
+                data-om="✝ TULLU RAJOTA Church"
+                data-en="✝ TULLU RAJOTA Church">
+            ✝ Ethiopian Orthodox Tewahedo Church
+          </span>
+
+
+                <h1>
+            <span data-om="Baga Nagaan Dhuftan"
+                  data-en="Welcome to Tullu Rajota">
+              Baga Nagaan Dhuftan
+            </span>
+                </h1>
+
+
+                <p
+                        data-om="Tullu Rajota EOTC Afaan Oromo Service. Waaqayyoon waliin waaqeffachuu, amantii keenya barachuu, wal iyyaafachuu fi dhaloota keenyaaf amantii keenya dabarsuu."
+                        data-en="Welcome to Tullu Rajota EOTC. We gather to worship God, grow in faith, love one another, and pass our Orthodox Christian faith to the next generation."
+                >
+                    Tullu Rajota Ethiopian Orthodox Church Afaan Oromo Service.
+                    Waaqayyoon waliin waaqeffachuu, amantii keenya barachuu,
+                    wal jaallachuu fi dhaloota keenyaaf amantii keenya dabarsuu.
+                </p>
+
+
+                <div class="buttons">
+
+                    <a
+                            href="#services"
+                            class="btn btn-primary"
+                            data-om="🙏 Waaqeffannaa Keenya"
+                            data-en="🙏 Our Worship"
+                    >
+                        🙏 Waaqeffannaa Keenya
+                    </a>
+
+
+                    <a
+                            href="#about"
+                            class="btn btn-outline"
+                            data-om="Waa'ee Keenya"
+                            data-en="About Our Church"
+                    >
+                        Waa'ee Keenya
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         QUICK INFO
+    ========================================== -->
+
+    <div class="quick-info">
+
+        <div class="container info-grid">
+
+            <div class="info-card">
+
+                <div class="info-icon">⛪</div>
+
+                <div>
+
+                    <h3
+                            data-om="Waaqeffannaa"
+                            data-en="Worship"
+                    >
+                        Waaqeffannaa
+                    </h3>
+
+                    <p
+                            data-om="Tajaajila Afaan Oromoo fi Qiddaasee Qulqulluu."
+                            data-en="Afaan Oromo worship and Holy Qiddase."
+                    >
+                        Tajaajila Afaan Oromoo fi Qiddaasee Qulqulluu.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="info-icon"></div>
+
+                <div>
+
+                    <h3
+                            data-om="Barumsa Amantii"
+                            data-en="Faith Education"
+                    >
+                        Barumsa Amantii
+                    </h3>
+
+                    <p
+                            data-om="Kitaaba Qulqulluu fi barumsa Tewaahidoo."
+                            data-en="Holy Scripture and Orthodox Tewahedo teachings."
+                    >
+                        Kitaaba Qulqulluu fi barumsa Tewaahidoo.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="info-icon">
+                <div>
+
+                    <h3
+                            data-om="Hawaasa"
+                            data-en="Community"
+                    >
+                        Hawaasa
+                    </h3>
+
+                    <p
+                            data-om="Tokkummaa, jaalala, tajaajila fi wal-gargaarsa."
+                            data-en="Unity, love, service, and community support."
+                    >
+                        Tokkummaa, jaalala, tajaajila fi wal-gargaarsa.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==========================================
+         ABOUT
+    ========================================== -->
+
+    <section class="about" id="about">
+
+        <div class="container about-grid">
+
+            <div class="about-image">
+
+
+                <img src="nigsii - Copy.jpg" height="960" width="1280"/><img src="Abbootii tajaajila booda.jpg" height="960" width="1280"/>
+                <div class="image-badge">
+
+                    <strong>✝</strong>
+
+                    <span
+                            data-om="Amantii • Jaalala • Tajaajila"
+                            data-en="Faith • Love • Service"
+                    >
+              Amantii • Jaalala • Tajaajila
+            </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="about-text">
+
+          <span class="eyebrow"
+                data-om="Waa'ee Mana Kiristaanaa Keenya"
+                data-en="About Our Church">
+            Waa'ee Mana Kiristaanaa Keenya
+          </span>
+
+
+                <h2
+                        data-om="Maatii tokko taanee Waaqayyoon haa waaqeffannu."
+                        data-en="Let us worship God together as one family."
+                >
+                    Maatii tokko taanee Waaqayyoon haa waaqeffannu.
+                </h2>
+
+
+                <p
+                        data-om="Tullu Rajota EOTC Afaan Oromo Service mana kiristaanaa keessatti amantoota Afaan Oromoo dubbatan walitti fiduun Waaqayyoon waaqeffachuuf, barachuuf fi tajaajiluuf bakka jireenyaa ta'uu hawwa."
+                        data-en="Tullu Rajota EOTC brings together Afaan Oromo-speaking Orthodox Christians to worship God, learn the faith, grow spiritually, and serve one another."
+                >
+                    Tullu Rajota Ethiopian Orthodox Church Afaan Oromo Service
+                    mana kiristaanaa keessatti amantoota Afaan Oromoo dubbatan
+                    walitti fiduun Waaqayyoon waaqeffachuuf, barachuuf fi
+                    tajaajiluuf bakka jireenyaa ta'uu hawwa.
+                </p>
+
+
+                <p
+                        data-om="Kaayyoon keenya amantii Ortodoksii Tewaahidoo dhalootaa dhalootatti dabarsuu, maatiiwwan cimsuu, dargaggoota jajjabeessuu fi hawaasa keenya jaalalaan tajaajiluu dha."
+                        data-en="Our mission is to preserve and share the EOTC faith, strengthen families, encourage youth, and serve our community with Christian love."
+                >
+                    Kaayyoon keenya amantii Ortodoksii Tewaahidoo
+                    dhalootaa dhalootatti dabarsuu, maatiiwwan cimsuu,
+                    dargaggoota jajjabeessuu fi hawaasa keenya jaalalaan
+                    tajaajiluu dha.
+                </p>
+
+
+                <ul class="check-list">
+
+                    <li
+                            data-om="Waaqeffannaa fi kadhannaa"
+                            data-en="Worship and prayer"
+                    >
+                        Waaqeffannaa fi kadhannaa
+                    </li>
+
+                    <li
+                            data-om="Barumsa Kitaaba Qulqulluu"
+                            data-en="Holy Bible education"
+                    >
+                        Barumsa Kitaaba Qulqulluu
+                    </li>
+
+                    <li
+                            data-om="Zema fi faarfannaa Afaan Oromoo"
+                            data-en="Zema and Afaan Oromo hymns"
+                    >
+                        Zema fi faarfannaa Afaan Oromoo
+                    </li>
+
+                    <li
+                            data-om="Dargaggootaa fi ijoollee tajaajiluu"
+                            data-en="Serving youth and children"
+                    >
+                        Dargaggootaa fi ijoollee tajaajiluu
+                    </li>
+
+                    <li
+                            data-om="Hawaasa keenya waliin tajaajiluu"
+                            data-en="Serving our community together"
+                    >
+                        Hawaasa keenya waliin tajaajiluu
+                    </li>
+
+                </ul>
+
+
+                <a
+                        href="#contact"
+                        class="btn btn-primary"
+                        data-om="Nu Qunnamaa"
+                        data-en="Contact Us"
+                >
+                    Nu Qunnamaa
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         CHURCH FATHERS
+    ========================================== -->
+
+    <section class="fathers" id="fathers">
+
+        <div class="container">
+
+            <div class="section-header">
+
+          <span class="eyebrow"
+                data-om="Abbootii Amantii"
+                data-en="Church Fathers">
+            Abbootii Amantii
+          </span>
+
+                <h2
+                        data-om="Abbootii fi Qulqulloota Keenya"
+                        data-en="Our Fathers and Saints"
+                >
+                    Abbootii fi Qulqulloota Keenya
+                </h2>
+
+                <p
+                        data-om="Seenaa, kadhannaa, sooma fi fakkeenya jireenyaa abbootii amantii keenya irraa baranna."
+                        data-en="We learn from the lives, prayers, fasting, teachings, and examples of our fathers and saints."
+                >
+                    Seenaa, kadhannaa, sooma fi fakkeenya jireenyaa
+                    abbootii amantii keenya irraa baranna.
+                </p>
+
+            </div>
+
+
+            <div class="father-grid">
+
+
+                <article class="father-card">
+
+                    <div class="father-image">
+
+
+
+
+
+                        <img src="Abune Tekliye.png" height="246" width="159"/>
+                    </div>
+
+                    <div class="father-content">
+
+              <span
+                      data-om="Abbaa Amantii"
+                      data-en="Church Father"
+              >
+                Abbaa Amantii
+              </span>
+
+                        <h3>
+                            Abune Tekle Haymanot
+                        </h3>
+
+                        <p
+                                data-om="Qulqulluu fi abbaa amantii Itoophiyaa keessatti kabajamaa. Jireenyi isaa kadhannaa, sooma fi tajaajilaan beekama."
+                                data-en="A beloved Ethiopian saint and father of the faith, remembered for a life of prayer, fasting, devotion, and service."
+                        >
+                            Qulqulluu fi abbaa amantii Itoophiyaa keessatti
+                            kabajamaa. Jireenyi isaa kadhannaa, sooma fi
+                            tajaajilaan beekama.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="father-card">
+
+                    <div class="father-image">
+
+
+
+
+
+                        <img src="St Michael.png" height="672" width="686"/></div>
+
+                    <div class="father-content">
+
+              <span
+                      data-om="Qulqulluu"
+                      data-en="Saint"
+              >
+                Qulqulluu
+              </span>
+
+                        <h3>
+                            Qul. Mikaa'elii
+                        </h3>
+
+                        <p
+                                data-om="Abbaa jireenya kadhannaa fi soomaa. Seenaa hafuuraa Mana Kiristaanaa Tewaahidoo keessatti iddoo guddaa qaba."
+                                data-en="A revered Ethiopian saint known for a life devoted to prayer, fasting, and spiritual discipline."
+                        >
+                            Abbaa jireenya kadhannaa fi soomaa.
+                            Seenaa hafuuraa Mana Kiristaanaa Tewaahidoo keessatti
+                            iddoo guddaa qaba.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="father-card">
+
+                    <div class="father-image">
+
+
+                        <img src="St Peter and Paul.png" height="419" width="622"/></div>
+
+                    <div class="father-content">
+
+              <span
+                      data-om="St. Peter and St. Pau;"
+                      data-en="Qul. Pheexiroosii fi Qul. Phaawuloos"
+              >
+                Qul. Pheexiroosii fi Qul. Phaawuloos;
+              </span>
+
+                        <h3>
+                            St. Peter and St. Pau;
+                        </h3>
+
+                        <p
+                                data-om="Abbootiin Sagalii seenaa Mana Kiristaanaa Itoophiyaa keessatti gahee guddaa qaban."
+                                data-en="The Nine Saints played an important role in the history and development of Christianity in Ethiopia."
+                        >
+                            Abbootiin Sagalii seenaa Mana Kiristaanaa
+                            Itoophiyaa keessatti gahee guddaa qaban.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         SERVICES
+    ========================================== -->
+
+    <section class="services" id="services">
+
+        <div class="container">
+
+            <div class="section-header">
+
+          <span class="eyebrow"
+                data-om="Waaqeffannaa fi Jireenya Hafuuraa"
+                data-en="Worship and Spiritual Life">
+            Waaqeffannaa fi Jireenya Hafuuraa
+          </span>
+
+                <h2
+                        data-om="Tajaajila Keenya"
+                        data-en="Our Ministries and Services"
+                >
+                    Tajaajila Keenya
+                </h2>
+
+                <p
+                        data-om="Waaqayyoon waaqeffachuu fi amantii keenya cimsachuuf sagantaalee gara garaa."
+                        data-en="Different ministries and services to help us worship God and grow in faith."
+                >
+                    Waaqayyoon waaqeffachuu fi amantii keenya
+                    cimsachuuf sagantaalee gara garaa.
+                </p>
+
+            </div>
+
+
+            <div class="service-grid">
+
+
+                <article class="service-card">
+
+                    <div class="service-icon">✝️</div>
+
+                    <h3
+                            data-om="Qiddaasee"
+                            data-en="Holy Qiddase"
+                    >
+                        Qiddaasee
+                    </h3>
+
+                    <p
+                            data-om="Qiddaasee Qulqulluu fi waaqeffannaa Ortodoksii Tewaahidoo."
+                            data-en="Holy Qiddase and Ethiopian Orthodox Tewahedo worship."
+                    >
+                        Qiddaasee Qulqulluu fi waaqeffannaa
+                        Ortodoksii Tewaahidoo.
+                    </p>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <div class="service-icon">🕯️</div>
+
+                    <h3
+                            data-om="Kadhannaa"
+                            data-en="Prayer"
+                    >
+                        Kadhannaa
+                    </h3>
+
+                    <p
+                            data-om="Kadhannaa, soomaa fi jireenya hafuuraa keessatti wal jajjabeessuu."
+                            data-en="Prayer, fasting, and encouragement in our spiritual life."
+                    >
+                        Kadhannaa, soomaa fi jireenya hafuuraa keessatti
+                        wal jajjabeessuu.
+                    </p>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <div class="service-icon">📖</div>
+
+                    <h3
+                            data-om="Kitaaba Qulqulluu"
+                            data-en="Holy Scripture"
+                    >
+                        Kitaaba Qulqulluu
+                    </h3>
+
+                    <p
+                            data-om="Dubbisa Kitaaba Qulqulluu fi barumsa Afaan Oromoo."
+                            data-en="Holy Bible study and teaching in Afaan Oromo and English."
+                    >
+                        Dubbisa Kitaaba Qulqulluu fi barumsa Afaan Oromoo.
+                    </p>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <div class="service-icon">🎵</div>
+
+                    <h3
+                            data-om="Zema / Faarfannaa"
+                            data-en="Zema / Hymns"
+                    >
+                        Zema / Faarfannaa
+                    </h3>
+
+                    <p
+                            data-om="Faarfannaa fi sirba hafuuraa aadaa Tewaahidoo."
+                            data-en="Traditional Ethiopian Orthodox Zema and spiritual hymns."
+                    >
+                        Faarfannaa fi sirba hafuuraa aadaa Tewaahidoo.
+                    </p>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <div class="service-icon">☂️</div>
+
+                    <h3
+                            data-om="Ayyaana fi Sirna"
+                            data-en="Feasts and Services"
+                    >
+                        Ayyaana fi Sirna
+                    </h3>
+
+                    <p
+                            data-om="Ayyaanota, sirnoota fi sagantaalee amantii keenya."
+                            data-en="Orthodox feasts, celebrations, and special church services."
+                    >
+                        Ayyaanota, sirnoota fi sagantaalee amantii keenya.
+                    </p>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <div class="service-icon">🤲</div>
+
+                    <h3
+                            data-om="Tajaajila Hawaasaa"
+                            data-en="Community Service"
+                    >
+                        Tajaajila Hawaasaa
+                    </h3>
+
+                    <p
+                            data-om="Jaalala Kiristaanaa hojii fi gargaarsa hawaasa keessatti mul'isuu."
+                            data-en="Showing Christian love through service and support in our community."
+                    >
+                        Jaalala Kiristaanaa hojii fi gargaarsa hawaasa
+                        keessatti mul'isuu.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         SCHEDULE
+    ========================================== -->
+
+    <section class="schedule">
+
+        <div class="container">
+
+            <div class="section-header">
+
+          <span class="eyebrow"
+                data-om="Sagantaa Torbanii"
+                data-en="Weekly Schedule">
+            Sagantaa Torbanii
+          </span>
+
+                <h2
+                        data-om="Sagantaa Torbanii"
+                        data-en="Weekly Schedule"
+                >
+                    Sagantaa Torbanii
+                </h2>
+
+                <p
+                        data-om="Sa'aatiiwwan kun fakkeenya. Yeroo dhugaa mana kiristaanaa keessaniin bakka buusi."
+                        data-en="These are sample times. Replace them with your church's actual schedule."
+                >
+                    Sa'aatiiwwan kun fakkeenya. Yeroo dhugaa mana
+                    kiristaanaa keessaniin bakka buusi.
+                </p>
+
+            </div>
+
+
+            <div class="schedule-table">
+
+                <div class="schedule-row schedule-header">
+
+                    <div
+                            data-om="Guyyaa"
+                            data-en="Day"
+                    >
+                        Guyyaa
+                    </div>
+
+                    <div
+                            data-om="Sagantaa"
+                            data-en="Service"
+                    >
+                        Sagantaa
+                    </div>
+
+                    <div
+                            data-om="Sa'aatii"
+                            data-en="Time"
+                    >
+                        Sa'aatii
+                    </div>
+
+                </div>
+
+
+                <div class="schedule-row">
+
+                    <div class="day"
+                         data-om="Sanbata"
+                         data-en="Saturday">
+                        Sanbata
+                    </div>
+
+                    <div
+                            data-om="Barumsa fi Kadhannaa"
+                            data-en="Bible Study and Prayer"
+                    >
+                        Barumsa fi Kadhannaa
+                    </div>
+
+                    <div class="time">
+                        5:00 PM
+                    </div>
+
+                </div>
+
+
+                <div class="schedule-row">
+
+                    <div class="day"
+                         data-om="Dilbata"
+                         data-en="Sunday">
+                        Dilbata
+                    </div>
+
+                    <div
+                            data-om="Qiddaasee / Waaqeffannaa"
+                            data-en="Holy Qiddase / Worship"
+                    >
+                        Qiddaasee / Waaqeffannaa
+                    </div>
+
+                    <div class="time">
+                        6:00 AM
+                    </div>
+
+                </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         EVENTS
+    ========================================== -->
+
+    <section class="events" id="events">
+
+        <div class="container">
+
+            <div class="section-header">
+
+          <span class="eyebrow"
+                data-om="Sagantaalee"
+                data-en="Events">
+            Sagantaalee
+          </span>
+
+                <h2
+                        data-om="Sagantaalee fi Taateewwan"
+                        data-en="Events and Celebrations"
+                >
+                    Sagantaalee fi Taateewwan
+                </h2>
+
+                <p
+                        data-om="Sagantaalee addaa, ayyaanota, walga'ii fi hojii hawaasaa."
+                        data-en="Special services, feasts, gatherings, and community activities."
+                >
+                    Sagantaalee addaa, ayyaanota, walga'ii fi
+                    hojii hawaasaa.
+                </p>
+
+            </div>
+
+
+            <div class="events-grid">
+
+
+                <article class="event-card">
+
+
+                    <img src="naccii 2 - Copy - Copy.jpg" height="500" width="960"/>
+                    <div class="event-content">
+
+              <span class="date">
+                SUNDAY • 9:00 AM
+              </span>
+
+                        <h3
+                                data-om="Qiddaasee Afaan Oromoo"
+                                data-en="Afaan Oromo Holy Qiddase"
+                        >
+                            Qiddaasee Afaan Oromoo
+                        </h3>
+
+                        <p
+                                data-om="Waaqeffannaa waloo fi barumsa hafuuraa Afaan Oromoo."
+                                data-en="Corporate worship and spiritual teaching in Afaan Oromo."
+                        >
+                            Waaqeffannaa waloo fi barumsa hafuuraa
+                            Afaan Oromoo.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="event-card">
+
+
+                    <img src="Maatii Tulluu Raajotaa.jpg" height="350" width="1280"/>
+                    <div class="event-content">
+
+              <span class="date">
+                MONTHLY
+              </span>
+
+                        </h3>
+
+
+
+                        <p
+
+
+                                data-om="Maatiiwwan fi miseensonni mana kiristaanaa walitti dhufuun marii fi tajaajila hawaasaa."
+                                data-en="Church families and members gather for fellowship, discussion, and community service."
+                        >
+                            Maatiiwwan fi miseensonni mana kiristaanaa
+                            walitti dhufuun marii fi tajaajila hawaasaa.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="event-card">
+
+
+                    <img src="photo_2024-06-21_21-08-52.jpg" height="350" width="1280"/>
+                    <div class="event-content">
+
+              <span class="date">
+                SPECIAL EVENT
+              </span>
+
+                        <h3
+                                data-om="Ayyaana fi Sagantaa Addaa"
+                                data-en="Feasts and Special Events"
+                        >
+                            Ayyaana fi Sagantaa Addaa
+                        </h3>
+
+                        <p
+                                data-om="Odeeffannoo ayyaanota fi sagantaalee addaa asitti maxxansina."
+                                data-en="Information about upcoming Orthodox feasts and special events will be posted here."
+                        >
+                            Odeeffannoo ayyaanota fi sagantaalee addaa
+                            asitti maxxansina.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         MINISTRIES
+    ========================================== -->
+
+    <section class="ministries" id="ministries">
+
+        <div class="container">
+
+            <div class="section-header">
+
+          <span class="eyebrow"
+                data-om="Tajaajilawwan"
+                data-en="Ministries">
+            Tajaajilawwan
+          </span>
+
+                <h2
+                        data-om="Tajaajilawwan Keenya"
+                        data-en="Our Ministries"
+                >
+                    Tajaajilawwan Keenya
+                </h2>
+
+            </div>
+
+
+            <div class="ministry-grid">
+
+
+                <div class="ministry">
+
+                    <div class="ministry-icon">
+                        👶
+                    </div>
+
+                    <h3
+                            data-om="Ijoollee"
+                            data-en="Children"
+                    >
+                        Ijoollee
+                    </h3>
+
+                    <p
+                            data-om="Barumsa amantii fi guddina hafuuraa ijoollee."
+                            data-en="Faith education and spiritual growth for children."
+                    >
+                        Barumsa amantii fi guddina hafuuraa ijoollee.
+                    </p>
+
+                </div>
+
+
+                <div class="ministry">
+
+                    <div class="ministry-icon">
+                        🧑‍🎓
+                    </div>
+
+                    <h3
+                            data-om="Dargaggoota"
+                            data-en="Youth"
+                    >
+                        Dargaggoota
+                    </h3>
+
+                    <p
+                            data-om="Dargaggoota keessatti amantii, hoggansa fi tokkummaa."
+                            data-en="Faith, leadership, fellowship, and unity for young people."
+                    >
+                        Dargaggoota keessatti amantii, hoggansa fi tokkummaa.
+                    </p>
+
+                </div>
+
+
+                <div class="ministry">
+
+                    <div class="ministry-icon">
+                        🎶
+                    </div>
+
+                    <h3
+                            data-om="Faarfannaa"
+                            data-en="Choir & Zema"
+                    >
+                        Faarfannaa
+                    </h3>
+
+                    <p
+                            data-om="yeedaloo, faarfannaa fi tajaajila ."
+                            data-en="Zema, hymns, choir, and c ministry."
+                    >
+                        , Zema, faarfannaa fi tajaajila .
+                    </p>
+
+                </div>
+
+
+                <div class="ministry">
+
+                    <div class="ministry-icon">
+                        🤲
+                    </div>
+
+                    <h3
+                            data-om="Hawaasa"
+                            data-en="Community"
+                    >
+                        Hawaasa
+                    </h3>
+
+                    <p
+                            data-om="Gargaarsa, daawwannaa fi hojii hawaasaa."
+                            data-en="Community support, visitation, and outreach."
+                    >
+                        Gargaarsa, daawwannaa fi hojii hawaasaa.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         SERMONS
+    ========================================== -->
+
+    <section class="sermons">
+
+        <div class="container">
+
+            <div class="section-header">
+
+          <span class="eyebrow"
+                style="color:#f4d98b"
+                data-om="Lallabaa fi Barumsa"
+                data-en="Sermons and Teaching">
+            Lallabaa fi Barumsa
+          </span>
+
+                <h2
+                        data-om="Barumsa Hafuuraa"
+                        data-en="Spiritual Teaching"
+                >
+                    Barumsa Hafuuraa
+                </h2>
+
+                <p
+                        data-om="Lallaba, barumsa fi sagantaalee hafuuraa keenya."
+                        data-en="Sermons, Bible teaching, and spiritual messages from our church."
+                >
+                    Lallaba, barumsa fi sagantaalee hafuuraa keenya.
+                </p>
+
+            </div>
+
+
+            <div class="sermon-grid">
+
+
+                <article class="sermon-card">
+
+                    <div class="play">
+                        ▶
+                    </div>
+
+                    <h3
+                            data-om="Jaalala Waaqayyoo"
+                            data-en="The Love of God"
+                    >
+                        Jaalala Waaqayyoo
+                    </h3>
+
+                    <p
+                            data-om="Barumsa Afaan Oromoo. Linkii YouTube ykn video keessan asitti galchi."
+                            data-en="Afaan Oromo teaching. Add your YouTube or video link here."
+                    >
+                        Barumsa Afaan Oromoo.
+                        Linkii YouTube ykn video keessan asitti galchi.
+                    </p>
+
+                </article>
+
+
+                <article class="sermon-card">
+
+                    <div class="play">
+                        ▶
+                    </div>
+
+                    <h3
+                            data-om="Amantii fi Obsa"
+                            data-en="Faith and Patience"
+                    >
+                        Amantii fi Obsa
+                    </h3>
+
+                    <p
+                            data-om="Barumsa hafuuraa fi dubbisa Kitaaba Qulqulluu."
+                            data-en="Spiritual teaching and Holy Scripture study."
+                    >
+                        Barumsa hafuuraa fi dubbisa Kitaaba Qulqulluu.
+                    </p>
+
+                </article>
+
+
+                <article class="sermon-card">
+
+                    <div class="play">
+                        ▶
+                    </div>
+
+                    <h3
+                            data-om="Jireenya Kiristaanaa"
+                            data-en="Christian Life"
+                    >
+                        Jireenya Kiristaanaa
+                    </h3>
+
+                    <p
+                            data-om="Jireenya guyyaa guyyaa keessatti amantii keenya hojiirra oolchuu."
+                            data-en="Living out our Orthodox Christian faith in everyday life."
+                    >
+                        Jireenya guyyaa guyyaa keessatti
+                        amantii keenya hojiirra oolchuu.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         ETHIOPIAN CULTURE
+    ========================================== -->
+
+    <section class="gallery" id="gallery">
+
+        <div class="container">
+
+            <div class="section-header">
+
+          <span class="eyebrow"
+                data-om="Aadaa fi Amantii"
+                data-en="Culture and Faith">
+            Aadaa fi Amantii
+          </span>
+
+                <h2
+                        data-om="Aadaa Ortodoksii Itoophiyaa"
+                        data-en="Ethiopian Orthodox Culture"
+                >
+                    Aadaa Ortodoksii Itoophiyaa
+                </h2>
+
+                <p
+                        data-om="Mallattoolee, fannoo, faarfannaa, uffata, kitaabota qulqulluu fi waaqeffannaa Tewaahidoo."
+                        data-en="Explore Ethiopian Orthodox crosses, worship, manuscripts, traditional clothing, celebrations, and church culture."
+                >
+                    Mallattoolee, fannoo, faarfannaa, uffata,
+                    kitaabota qulqulluu fi waaqeffannaa Tewaahidoo.
+                </p>
+
+            </div>
+
+
+            <div class="gallery-grid">
+
+
+                <div class="gallery-item large">
+
+
+                    <img src="July 4th.jpg" height="1280" width="960"/><img src="4th of july.jpg" height="960" width="1280"/>
+                    <div class="gallery-label"
+                         data-om="Jul 4th/2025"
+                         data-en="Jul 4th/2025">
+                        Imala Qulqulluu
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+
+                    <img src="Guyyaa Abbootii.jpg" height="960" width="1280"/>
+                    <div class="gallery-label"
+                         data-om="Ayyaana Tewaahidoo"
+                         data-en="Orthodox Celebration">
+                        Ayyaana Tewaahidoo
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+
+                    <img src="da'immam - Copy (2).jpg" height="960" width="1280"/>
+                    <div class="gallery-label"
+                         data-om="Daa'imman Tulluu Raajotaa"
+                         data-en="Tullu Rajota kids">
+                        Daa'imman Tulluu Raajotaa
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+
+                    <img src="luba Ballaxaa - Copy - Copy.jpg" height="1280" width="936"/>
+                    <div class="gallery-label"
+                         data-om="Malaake Mankiraat Luba Ballaxaa"
+                         data-en="Malaake Mankiraat Luba Ballaxaa">
+                       Malaake Mankiraat Luba Ballaxaa
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+
+                    <img src="Maatii.jpg" height="960" width="1280"/>
+                    <div class="gallery-label"
+                         data-om="Uummata Tulluu Raajotaa"
+                         data-en="Tullu Rajota community">
+
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-item large">
+
+
+                    <img src="Ayyaana Waggaa.jpg" height="960" width="1280"/>
+                    <div class="gallery-label"
+                         data-om="Abbootii fi Qeesota"
+                         data-en="Fathers and Clergy">
+                        Abbootii fi Qeesota
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         GIVING
+    ========================================== -->
+
+    <section class="giving" id="giving">
+
+        <div class="container">
+
+            <div class="giving-content">
+
+          <span class="eyebrow"
+                data-om="Tajaajila Deeggaruu"
+                data-en="Support the Ministry">
+            Tajaajila Deeggaruu
+          </span>
+
+                <h2
+                        data-om="Tajaajila Waaqayyoo Keessatti Qooda Qabaadhaa"
+                        data-en="Support the Work of God's Church"
+                >
+                    Tajaajila Waaqayyoo Keessatti Qooda Qabaadhaa
+                </h2>
+
+                <p
+                        data-om="Kennaan keessan hojii mana kiristaanaa, barumsa, tajaajila hawaasaa fi hojii hafuuraa deeggaruuf gargaara."
+                        data-en="Your generosity helps support worship, education, community service, youth ministry, and the spiritual work of our church."
+                >
+                    Kennaan keessan hojii mana kiristaanaa, barumsa,
+                    tajaajila hawaasaa fi hojii hafuuraa deeggaruuf gargaara.
+                </p>
+
+                <div class="buttons center-buttons">
+
+                    <a
+                            href="#contact"
+                            class="btn btn-primary"
+                            data-om="💛 Kennaa Kennuu"
+                            data-en="💛 Give to the Church"
+                    >
+                        💛 Kennaa Kennuu
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         CONTACT
+    ========================================== -->
+
+    <section class="contact" id="contact">
+
+        <div class="container contact-grid">
+
+
+            <div class="contact-info">
+
+          <span class="eyebrow"
+                data-om="Nu Qunnamaa"
+                data-en="Get in Touch">
+            Nu Qunnamaa
+          </span>
+
+                <h2
+                        data-om="Nu Qunnamaa"
+                        data-en="Contact Us"
+                >
+                    Nu Qunnamaa
+                </h2>
+
+                <p
+                        data-om="Gaaffii yoo qabaattan, kadhannaa gaafachuu yoo barbaaddan, yookaan nu daawwachuu yoo barbaaddan nu qunnamaa."
+                        data-en="If you have questions, need prayer, or would like to visit our church, please contact us."
+                >
+                    Gaaffii yoo qabaattan, kadhannaa gaafachuu yoo barbaaddan,
+                    yookaan nu daawwachuu yoo barbaaddan nu qunnamaa.
+                </p>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-item-icon">
+                        📍
+                    </div>
+
+                    <div>
+
+                        <strong
+                                data-om="Teessoo"
+                                data-en="Address"
+                        >
+                            Teessoo
+                        </strong>
+
+                        <span>
+                113 N Saratoga St, St Paul, MN 55104
+              </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-item-icon">
+                        📞
+                    </div>
+
+                    <div>
+
+                        <strong
+                                data-om="Bilbila"
+                                data-en="Phone"
+                        >
+                            Bilbila
+                        </strong>
+
+                        <span>
+                612 441 6883
+              </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-item-icon">
+                        ✉️
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Email
+                        </strong>
+
+                        <span>
+                [Church Email]
+              </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FORM -->
+
+            <form
+                    class="contact-form"
+                    onsubmit="submitForm(event)"
+            >
+
+                <div class="form-group">
+
+                    <label
+                            for="name"
+                            data-om="Maqaa"
+                            data-en="Name"
+                    >
+                        Maqaa
+                    </label>
+
+                    <input
+                            id="name"
+                            type="text"
+                            required
+                            placeholder="Maqaa keessan"
+                            data-placeholder-om="Maqaa keessan"
+                            data-placeholder-en="Your name"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label
+                            for="email"
+                            data-om="Email"
+                            data-en="Email"
+                    >
+                        Email
+                    </label>
+
+                    <input
+                            id="email"
+                            type="email"
+                            required
+                            placeholder="email@example.com"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label
+                            for="subject"
+                            data-om="Dhimma"
+                            data-en="Subject"
+                    >
+                        Dhimma
+                    </label>
+
+                    <select id="subject">
+
+                        <option
+                                data-om="Kadhannaa"
+                                data-en="Prayer Request"
+                        >
+                            Kadhannaa
+                        </option>
+
+                        <option
+                                data-om="Gaaffii"
+                                data-en="Question"
+                        >
+                            Gaaffii
+                        </option>
+
+                        <option
+                                data-om="Odeeffannoo"
+                                data-en="Information"
+                        >
+                            Odeeffannoo
+                        </option>
+
+                        <option
+                                data-om="Kennaa"
+                                data-en="Giving"
+                        >
+                            Kennaa
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label
+                            for="message"
+                            data-om="Ergaa"
+                            data-en="Message"
+                    >
+                        Ergaa
+                    </label>
+
+                    <textarea
+                            id="message"
+                            required
+                            placeholder="Ergaa keessan barreessaa..."
+                            data-placeholder-om="Ergaa keessan barreessaa..."
+                            data-placeholder-en="Write your message..."
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                        type="submit"
+                        class="btn btn-primary"
+                        data-om="Ergaa Ergi"
+                        data-en="Send Message"
+                >
+                    Ergaa Ergi
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<div class="ethiopian-pattern"></div>
+
+
+<!-- ==========================================
+     FOOTER
+========================================== -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <div>
+
+                <div class="footer-brand">
+                    ✝ Tullu Rajota
+                </div>
+
+                <p>
+                    Ethiopian Orthodox Tewahedo Church
+                </p>
+
+                <p>
+                    Afaan Oromo & English Service
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3
+                        data-om="Links"
+                        data-en="Links"
+                >
+                    Links
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="#home"
+                           data-om="Mana"
+                           data-en="Home">
+                            Mana
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#about"
+                           data-om="Waa'ee Keenya"
+                           data-en="About Us">
+                            Waa'ee Keenya
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#services"
+                           data-om="Waaqeffannaa"
+                           data-en="Worship">
+                            Waaqeffannaa
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3
+                        data-om="Tajaajila"
+                        data-en="Ministries"
+                >
+                    Tajaajila
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="#ministries"
+                           data-om="Ijoollee"
+                           data-en="Children">
+                            Ijoollee
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#ministries"
+                           data-om="Dargaggoota"
+                           data-en="Youth">
+                            Dargaggoota
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#sermons"
+                           data-om="Barumsa"
+                           data-en="Teaching">
+                            Barumsa
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3
+                        data-om="Qunnamtii"
+                        data-en="Contact"
+                >
+                    Qunnamtii
+                </h3>
+
+                <ul>
+
+                    <li>
+                        [Church Address]
+                    </li>
+113 N Saratoga St, St Paul, MN 55104
+                    <li>
+                        612 441 6883
+                    </li>
+
+                    <li>
+                        tullurajota@gmail.com
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © <span id="year"></span>
+
+            Tullu Rajota Ethiopian Orthodox Tewahedo Church.
+
+            <span
+                    data-om="Mirga Qopheessaa Hunda Qabna."
+                    data-en="All Rights Reserved."
+            >
+          Mirga Qopheessaa Hunda Qabna.
+        </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- ==========================================
+     JAVASCRIPT
+========================================== -->
+
+<script>
+
+    let currentLanguage = "om";
+
+
+    /* ==========================================
+       LANGUAGE SWITCHER
+    ========================================== */
+
+    function changeLanguage(language) {
+
+        currentLanguage = language;
+
+        document.documentElement.lang = language;
+
+
+        /* Change every translated element */
+
+        document.querySelectorAll("[data-om]").forEach(element => {
+
+            const translation =
+                element.getAttribute(`data-${language}`);
+
+            if (translation !== null) {
+                element.textContent = translation;
+            }
+
+        });
+
+
+        /* Change placeholders */
+
+        document.querySelectorAll(
+            "[data-placeholder-om]"
+        ).forEach(element => {
+
+            const placeholder =
+                element.getAttribute(
+                    `data-placeholder-${language}`
+                );
+
+            if (placeholder) {
+                element.placeholder = placeholder;
+            }
+
+        });
+
+
+        /* Select options */
+
+        document.querySelectorAll(
+            "select option[data-om]"
+        ).forEach(option => {
+
+            option.textContent =
+                option.getAttribute(`data-${language}`);
+
+        });
+
+
+        /* Active language */
+
+        document
+            .getElementById("omBtn")
+            .classList.toggle(
+            "active",
+            language === "om"
+        );
+
+        document
+            .getElementById("enBtn")
+            .classList.toggle(
+            "active",
+            language === "en"
+        );
+
+
+        /* Page title */
+
+        if (language === "en") {
+
+            document.title =
+                "Tullu Rajota Ethiopian Orthodox Church | English";
+
+        } else {
+
+            document.title =
+                "Tullu Rajota Ethiopian Orthodox Church | Afaan Oromo";
+
+        }
+
+
+        /* Save language */
+
+        localStorage.setItem(
+            "tulluRajotaLanguage",
+            language
+        );
+
+    }
+
+
+    /* ==========================================
+       LOAD SAVED LANGUAGE
+    ========================================== */
+
+    const savedLanguage =
+        localStorage.getItem(
+            "tulluRajotaLanguage"
+        );
+
+    if (savedLanguage === "en") {
+        changeLanguage("en");
+    } else {
+        changeLanguage("om");
+    }
+
+
+    /* ==========================================
+       MOBILE MENU
+    ========================================== */
+
+    function toggleMenu() {
+
+        document
+            .getElementById("navLinks")
+            .classList.toggle("active");
+
+    }
+
+
+    /* Close menu after clicking */
+
+    document.querySelectorAll(
+        ".nav-links a"
+    ).forEach(link => {
+
+        link.addEventListener(
+            "click",
+            () => {
+
+                document
+                    .getElementById("navLinks")
+                    .classList.remove("active");
+
+            }
+        );
+
+    });
+
+
+    /* ==========================================
+       CONTACT FORM
+    ========================================== */
+
+    function submitForm(event) {
+
+        event.preventDefault();
+
+        const name =
+            document.getElementById("name").value;
+
+
+        if (currentLanguage === "en") {
+
+            alert(
+                "Thank you, " +
+                name +
+                "! Your message has been received."
+            );
+
+        } else {
+
+            alert(
+                "Galatoomi, " +
+                name +
+                "! Ergaan keessan nuuf ergameera."
+            );
+
+        }
+
+
+        event.target.reset();
+
+    }
+
+
+    /* ==========================================
+       YEAR
+    ========================================== */
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
